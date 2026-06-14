@@ -1,0 +1,61 @@
+<suite name="su">
+
+	<test name="testtwo">
+		<!--		<groups>-->
+		<!--			<run>-->
+		<!--				<include name="first" />-->
+		<!--			</run>-->
+		<!--		</groups>-->
+		<!--		<parameter name="para" value="colour">-->
+		<!--			<parameter name="para2" value="colour2"></parameter>-->
+		<!--		</parameter>-->
+
+<listeners>
+<listener class-name = "listener.listen"></listener>
+</listeners>
+
+		<classes>
+			<class name="ng.NGPRACT" />
+			<class name="sample.Samplepac" />
+		</classes>
+	</test>
+
+<!--	<test name="testtwo1">-->
+<!--		<classes>-->
+<!--			<class name="sample.Samplepac" />-->
+<!--		</classes>-->
+<!--	</test>-->
+
+
+	<!--	<test name="testtwoi">-->
+	<!--		<groups>-->
+	<!--			<run>-->
+	<!--				<include name="dept" />-->
+	<!--			</run>-->
+	<!--		</groups>-->
+	<!--		<classes>-->
+	<!--			<class name="sample.Samplepac"></class>-->
+	<!--		</classes>-->
+
+	<!--			<class name="ng.NGPRACT">-->
+	<!--				<methods>-->
+	<!--					<include name="method_a" />-->
+	<!--					<include name="method_b" />-->
+	<!--					<include name="method_c" />-->
+	<!--					<include name="method_aa" />-->
+	<!--				</methods>-->
+
+	<!--	<test name="testone">-->
+	<!--		<classes>-->
+	<!--			<class name="sample.Samplepac">-->
+	<!--				<methods>-->
+	<!--					<include name="samp" />-->
+	<!--				</methods>-->
+	<!--			</class>-->
+	<!--		</classes>-->
+	<!--	</test>-->
+
+	<!--			</class>-->
+
+
+</suite>
