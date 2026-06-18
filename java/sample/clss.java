@@ -21,13 +21,13 @@ import org.testng.annotations.Test;
 import Pom_class.clsspom;
 
 public class clss {
-	
+
 	public static Logger log = Logger.getLogger(clss.class);
-	
-	
+
+
 	ChromeDriver driver;
-	
-@Test
+
+	@Test
 	public  void login() {
 
 		ChromeOptions options = new ChromeOptions();
@@ -36,35 +36,35 @@ public class clss {
 
 		PropertyConfigurator.configure("log4j.properties");
 		log.info("browser");
-		
+
 		driver.get("https://test.upexciseonline.co/");
 		driver.manage().window().maximize();
-		
+
 		log.info("url ");
-		
+
 		PageFactory.initElements(driver, clsspom.class);
-		
+
 		clsspom.username.sendKeys("test1711");
 		clsspom.pass.sendKeys("Test@123");
 		String captcha = JOptionPane.showInputDialog("Enter Captcha");
 		clsspom.captchafield.sendKeys(captcha);
 		clsspom.loginbutton.click();
-		
-		
-		
-//		WebElement username  = driver.findElement(By.xpath("//*[@formcontrolname='mail']"));
-//		username.sendKeys("test1711");
-//
-//		WebElement pass  = driver.findElement(By.xpath("//*[@formcontrolname='password']"));
-//		pass.sendKeys("Test@123");
-//
-//		String captcha = JOptionPane.showInputDialog("Enter Captcha");
-//		WebElement captchafield = driver.findElement(By.xpath("//input[@formcontrolname='captchatext']"));
-//		captchafield.sendKeys(captcha);
-//
-//		WebElement loginbutt  = driver.findElement(By.xpath("//input[@formcontrolname='captchatext']"
-//				+ "/following::*[contains(text(),'Login')]"));
-//		loginbutt.click();
+
+
+
+		//		WebElement username  = driver.findElement(By.xpath("//*[@formcontrolname='mail']"));
+		//		username.sendKeys("test1711");
+		//
+		//		WebElement pass  = driver.findElement(By.xpath("//*[@formcontrolname='password']"));
+		//		pass.sendKeys("Test@123");
+		//
+		//		String captcha = JOptionPane.showInputDialog("Enter Captcha");
+		//		WebElement captchafield = driver.findElement(By.xpath("//input[@formcontrolname='captchatext']"));
+		//		captchafield.sendKeys(captcha);
+		//
+		//		WebElement loginbutt  = driver.findElement(By.xpath("//input[@formcontrolname='captchatext']"
+		//				+ "/following::*[contains(text(),'Login')]"));
+		//		loginbutt.click();
 
 
 	}
@@ -108,29 +108,33 @@ public class clss {
 		WebElement eventbar_calendar = driver.findElement(By.xpath("//*[text()='Event Details']"));
 
 		js.executeScript("arguments[0].scrollIntoView(true);", eventbar_calendar);
-		
+
 		WebElement eventbar_fromdate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@formcontrolname='eventFromDate']")));
-		
+
 		//WebElement eventbar_fromdate = driver.findElement(By.xpath("//*[@formcontrolname='eventFromDate']"));
 		eventbar_fromdate.click();
-		
-          WebElement fromdate = driver.findElement(By.xpath("//button[@aria-label='Choose month and year']"));
-          fromdate.click();
-          
-          WebElement fromdate_year = driver.findElement(By.xpath("//td/following::*[text()='2027']"));
-          fromdate_year.click();
-          
-          WebElement fromdate_month = driver.findElement(By.xpath("//td/following::*[text()='Feb']"));
-          fromdate_month.click();
-          
-          WebElement fromdate_date = driver.findElement(By.xpath("//td/following::*[text()='3'][1]"));
-          fromdate_date.click();
-          
-          
-       
+
+		WebElement fromdate = driver.findElement(By.xpath("//button[@aria-label='Choose month and year']"));
+		fromdate.click();
+
+		WebElement fromdate_year = driver.findElement(By.xpath("//td/following::*[text()='2027']"));
+		fromdate_year.click();
+
+		WebElement fromdate_month = driver.findElement(By.xpath("//td/following::*[text()='Feb']"));
+		fromdate_month.click();
+
+		WebElement fromdate_date = driver.findElement(By.xpath("//td/following::*[text()='3'][1]"));
+		fromdate_date.click();
+
+
+
 	}
 
 
+	public void mmmmm() {
+
+
+	}
 
 
 	public static void main(String[] args) throws InterruptedException {
@@ -142,7 +146,7 @@ public class clss {
 
 	}
 
-	
-	
-	
+
+
+
 }
